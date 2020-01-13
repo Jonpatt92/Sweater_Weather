@@ -1,4 +1,6 @@
 class LocationFacade
+  attr_reader :location
+  
   def initialize(location)
     @location = location
   end
@@ -8,7 +10,7 @@ class LocationFacade
   end
 
   def antipode_address(coordinates)
-    @city_name ||= service.get_city_name(coordinates[:lat], coordinates[:long])
+    @antipode_city_name ||= service.get_city_name(coordinates[:lat], coordinates[:long])
   end
 
   private
