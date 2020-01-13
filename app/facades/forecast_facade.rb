@@ -1,10 +1,15 @@
 class ForecastFacade
   def initialize(coordinates)
-    @lat = coordinates[:lat]
-    @long = coordinates[:lng]
+    @lat  = coordinates[:lat]
+    @lng  = coordinates[:lng]
+    @long = coordinates[:long]
   end
 
   def weather_data
+    service.get_forecast(@lat, @lng)
+  end
+
+  def antipode_weather_data
     service.get_forecast(@lat, @long)
   end
 
