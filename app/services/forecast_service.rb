@@ -1,7 +1,6 @@
 class ForecastService
   def get_forecast(lat, long)
     response = fetch_data("/forecast/#{ENV['FORECAST_API_KEY']}/#{lat},#{long}")
-    binding.pry
     parse_data(response)
   end
 
