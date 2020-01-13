@@ -3,7 +3,7 @@ class Api::V1::AntipodeController < ApplicationController
     origin_location   = LocationFacade.new(params[:location])
     antipode_facade   = AntipodeFacade.new(origin_location.coordinates)
     antipode_forecast = ForecastFacade.new(antipode_facade.antipode_coordinates).forecast
-    antipode_address  = origin_location.antipode_address(antipode_facade.antipode_coordinates)
+    antipode_address  = origin_location.reverse_address(antipode_facade.antipode_coordinates)
 
     render json: {
       type: "Antipode",
