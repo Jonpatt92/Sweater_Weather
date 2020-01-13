@@ -4,8 +4,8 @@ class Api::V1::AntipodeController < ApplicationController
     antipode_facade   = AntipodeFacade.new(origin_location.coordinates)
     antipode_forecast = ForecastFacade.new(antipode_facade.antipode_coordinates).forecast
     antipode_address  = origin_location.antipode_address(antipode_facade.antipode_coordinates)
-binding.pry
-    render locals: {
+
+    render json: {
       type: "Antipode",
       attributes: {
         location_name: antipode_address,
