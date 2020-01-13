@@ -9,7 +9,7 @@ class ForecastFacade
   end
 
   def forecast
-    weather_data
+    Forecast.new(weather_data)
   end
 
   def current_forecast
