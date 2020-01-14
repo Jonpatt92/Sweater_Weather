@@ -1,11 +1,17 @@
 class ForecastFacade
-  def initialize(coordinates)
-    @lat  = coordinates[:lat]
-    @lng  = coordinates[:lng] || coordinates[:long]
+  attr_reader :location
+
+  def initialize(search_params)
+    @coordinates = location_coordinates(search_params)
+    @location    = reverse_address(@coordinates)
+  end
+
+  def location_coordinates(search_location)
+    @coordinates ||= location_service.get_coordinates(search_location)[:results][0][:geometry][:location]
   end
 
   def weather_data
-    service.get_forecast(@lat, @lng)
+    forecast_service.get_forecast(@coordinates[:lat], @coordinates[:lng] || @coordinates[:long])
   end
 
   def forecast
@@ -16,9 +22,17 @@ class ForecastFacade
     weather_data[:currently]
   end
 
+  def reverse_address(coordinates)
+    Location.new(location_service.get_location_address(coordinates[:lat], coordinates[:long] || coordinates[:lng]))
+  end
+
   private
 
-  def service
+  def forecast_service
     ForecastService.new
+  end
+
+  def location_service
+    LocationService.new
   end
 end
