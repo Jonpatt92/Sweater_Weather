@@ -1,12 +1,12 @@
 class LocationService
   def get_coordinates(location)
     response = fetch_data("/maps/api/geocode/json?address=#{location}")
-    parse_data(response)[:results][0][:geometry][:location]
+    parse_data(response)
   end
 
   def get_location_address(lat, long)
     response = fetch_data("/maps/api/geocode/json?latlng=#{lat},#{long}")
-    parse_data(response)[:results][1]
+    parse_data(response)
   end
 
   private
