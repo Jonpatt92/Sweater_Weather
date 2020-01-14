@@ -6,27 +6,9 @@ class Api::V1::ForecastController < ApplicationController
 
     render json: {
       type: "Forecast",
-      location: {
-         original_search: params[:location],
-           location_city: location.city,
-          location_state: location.state,
-        location_country: location.country
-      },
-      current_forecast: {
-           summary: forecast.summary,
-              high: forecast.high,
-               low: forecast.low,
-        feels_like: forecast.feels_like,
-          humidity: forecast.humidity,
-        visibility: forecast.visibility,
-          uv_index: forecast.uv_index
-      },
-      extended_forecast: {
-
-      },
-      hourly_forecast: {
-
-      }
+      original_search: params[:location],
+      location: location,
+      forecast: forecast
     }
   end
 end
