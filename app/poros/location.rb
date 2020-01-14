@@ -2,9 +2,9 @@ class Location
   attr_reader :city, :state, :country
 
   def initialize(location_data)
-    @city    = find_city(location_data)
-    @state   = find_state(location_data)
-    @country = find_country(location_data)
+    @city    = find_city(location_data[:results][1])
+    @state   = find_state(location_data[:results][1])
+    @country = find_country(location_data[:results][1])
   end
 
   def find_city(location_data)
