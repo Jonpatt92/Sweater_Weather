@@ -1,7 +1,9 @@
 class Forecast
-  attr_reader :current_time, :hourly_forecast, :daily_forecast, :current_summary, :day_summary, :temperature, :high, :low, :feels_like, :humidity, :visibility, :uv_index
+  attr_reader :id, :location, :current_time, :current_summary, :day_summary, :temperature, :high, :low, :feels_like, :humidity, :visibility, :uv_index, :hourly_forecast, :daily_forecast
 
-  def initialize(weather_data)
+  def initialize(weather_data, location)
+    @id              = 1
+    @location        = location
     @current_time    = get_offset_time(weather_data[:currently][:time], weather_data[:timezone])
     @current_summary = weather_data[:currently][:summary]
     @day_summary     = weather_data[:daily][:data][0][:summary]
