@@ -30,6 +30,6 @@ class Forecast
 
   def get_offset_time(time, timezone)
     tz = TZInfo::Timezone.get(timezone)
-    Time.at(time, in: tz).strftime('%l:%M %p, %-m/%d')
+    Time.at(time, in: tz).strftime('%-l:%M %p, %-m/%d')
   end
 end
