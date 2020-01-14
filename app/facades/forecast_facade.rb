@@ -3,7 +3,7 @@ class ForecastFacade
 
   def initialize(search_params)
     @coordinates = location_coordinates(search_params)
-    @location    = reverse_address(@coordinates)
+    @location    = reverse_address(@coordinates, search_params)
   end
 
   def location_coordinates(search_location)
@@ -15,15 +15,15 @@ class ForecastFacade
   end
 
   def forecast
-    Forecast.new(weather_data)
+    Forecast.new(weather_data, @location)
   end
 
   def current_forecast
     weather_data[:currently]
   end
 
-  def reverse_address(coordinates)
-    Location.new(location_service.get_location_address(coordinates[:lat], coordinates[:long] || coordinates[:lng]))
+  def reverse_address(coordinates, search_params)
+    Location.new(location_service.get_location_address(coordinates[:lat], coordinates[:long] || coordinates[:lng]), search_params)
   end
 
   private
