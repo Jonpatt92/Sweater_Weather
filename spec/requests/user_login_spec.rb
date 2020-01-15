@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'When a returning user submits email and password' do
   before(:all) do
+    User.destroy_all
     @user = User.create(email: 'email@example.com', password: "password", password_confirmation: "password")
   end
 
