@@ -1,0 +1,689 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=denver,co&key=<MAP_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Jan 2020 01:37:34 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=38
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7392358,
+                       "lng" : -104.990251
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJzxcfI6qAa4cR1jaKJ_j0jhE",
+                 "types" : [ "locality", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 15 Jan 2020 01:37:32 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?key=<MAP_API_KEY>&latlng=39.7392358,-104.990251
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Jan 2020 01:37:34 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=45
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "plus_code" : {
+              "compound_code" : "P2Q5+MV Denver, CO, USA",
+              "global_code" : "85FQP2Q5+MV"
+           },
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1437",
+                       "short_name" : "1437",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Bannock Street",
+                       "short_name" : "Bannock St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Civic Center",
+                       "short_name" : "Civic Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80202",
+                       "short_name" : "80202",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "1437 Bannock St, Denver, CO 80202, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73924969999999,
+                       "lng" : -104.9902505
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74059868029149,
+                          "lng" : -104.9889015197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.7379007197085,
+                          "lng" : -104.9915994802915
+                       }
+                    }
+                 },
+                 "place_id" : "EiYxNDM3IEJhbm5vY2sgU3QsIERlbnZlciwgQ08gODAyMDIsIFVTQSIbEhkKFAoSCaEsipPUeGyHEeBdzTb4V4lnEJ0L",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1465-1437",
+                       "short_name" : "1465-1437",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Bannock Street",
+                       "short_name" : "Bannock St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Civic Center",
+                       "short_name" : "Civic Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80202",
+                       "short_name" : "80202",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "1465-1437 Bannock St, Denver, CO 80202, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7394876,
+                          "lng" : -104.9902503
+                       },
+                       "southwest" : {
+                          "lat" : 39.7392353,
+                          "lng" : -104.9902537
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7393615,
+                       "lng" : -104.990252
+                    },
+                    "location_type" : "GEOMETRIC_CENTER",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7407104302915,
+                          "lng" : -104.9889030197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.7380124697085,
+                          "lng" : -104.9916009802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJoSyKk9R4bIcR4F3NNvhXiWc",
+                 "types" : [ "route" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Civic Center",
+                       "short_name" : "Civic Center",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Civic Center, Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.74058600000001,
+                          "lng" : -104.9874362
+                       },
+                       "southwest" : {
+                          "lat" : 39.726886,
+                          "lng" : -104.9982952
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7365497,
+                       "lng" : -104.9899995
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74058600000001,
+                          "lng" : -104.9874362
+                       },
+                       "southwest" : {
+                          "lat" : 39.726886,
+                          "lng" : -104.9982952
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJby9taix_bIcRIrNIJFw182M",
+                 "types" : [ "neighborhood", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80202",
+                       "short_name" : "80202",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80202, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.76666780000001,
+                          "lng" : -104.986105
+                       },
+                       "southwest" : {
+                          "lat" : 39.736849,
+                          "lng" : -105.012165
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7541032,
+                       "lng" : -105.0002242
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.76666780000001,
+                          "lng" : -104.986105
+                       },
+                       "southwest" : {
+                          "lat" : 39.736849,
+                          "lng" : -105.012165
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJwTF6RcN4bIcRWd8aCrbRvX0",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver County, Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.76161889999999,
+                       "lng" : -104.9622498
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJzWww5uJfbIcRBvfuO6cAtKY",
+                 "types" : [ "administrative_area_level_2", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver County",
+                       "short_name" : "Denver County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7392358,
+                       "lng" : -104.990251
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.6002959
+                       },
+                       "southwest" : {
+                          "lat" : 39.614431,
+                          "lng" : -105.109927
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJzxcfI6qAa4cR1jaKJ_j0jhE",
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Colorado, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 41.0034439,
+                          "lng" : -102.040878
+                       },
+                       "southwest" : {
+                          "lat" : 36.992424,
+                          "lng" : -109.060256
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.5500507,
+                       "lng" : -105.7820674
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.0034439,
+                          "lng" : -102.040878
+                       },
+                       "southwest" : {
+                          "lat" : 36.992424,
+                          "lng" : -109.060256
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJt1YYm3QUQIcR_6eQSTGDVMc",
+                 "types" : [ "administrative_area_level_1", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.5388001,
+                          "lng" : -66.885417
+                       },
+                       "southwest" : {
+                          "lat" : 18.7763,
+                          "lng" : 170.5957
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.09024,
+                       "lng" : -95.712891
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 71.5388001,
+                          "lng" : -66.885417
+                       },
+                       "southwest" : {
+                          "lat" : 18.7763,
+                          "lng" : 170.5957
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Wed, 15 Jan 2020 01:37:32 GMT
+- request:
+    method: get
+    uri: https://api.darksky.net/forecast/<FORECAST_API_KEY>/39.7392358,-104.990251?exclude=minutely,alerts,flags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Jan 2020 01:37:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Authentication-Time:
+      - 485ms
+      X-Forecast-Api-Calls:
+      - '4'
+      Cache-Control:
+      - max-age=60
+      Expires:
+      - Wed, 15 Jan 2020 01:38:34 +0000
+      X-Response-Time:
+      - 72.641ms
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '{"latitude":39.7392358,"longitude":-104.990251,"timezone":"America/Denver","currently":{"time":1579052254,"summary":"Clear","icon":"clear-night","nearestStormDistance":8,"nearestStormBearing":327,"precipIntensity":0,"precipProbability":0,"temperature":44.2,"apparentTemperature":44.48,"dewPoint":6.87,"humidity":0.21,"pressure":1009.2,"windSpeed":2.41,"windGust":4.73,"windBearing":104,"cloudCover":0.01,"uvIndex":0,"visibility":10,"ozone":353.7},"hourly":{"summary":"Clear
+        throughout the day.","icon":"clear-day","data":[{"time":1579050000,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":46.22,"apparentTemperature":46.22,"dewPoint":5.81,"humidity":0.19,"pressure":1008.6,"windSpeed":2.61,"windGust":7.66,"windBearing":74,"cloudCover":0.01,"uvIndex":0,"visibility":10,"ozone":353.1},{"time":1579053600,"summary":"Clear","icon":"clear-night","precipIntensity":0.0008,"precipProbability":0.01,"precipType":"rain","temperature":43.04,"apparentTemperature":43.04,"dewPoint":7.15,"humidity":0.22,"pressure":1009.4,"windSpeed":2.64,"windGust":3.55,"windBearing":113,"cloudCover":0.01,"uvIndex":0,"visibility":10,"ozone":353.9},{"time":1579057200,"summary":"Clear","icon":"clear-night","precipIntensity":0.0011,"precipProbability":0.01,"precipType":"rain","temperature":39.97,"apparentTemperature":36.14,"dewPoint":7.64,"humidity":0.26,"pressure":1010.9,"windSpeed":5.4,"windGust":6.02,"windBearing":179,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":354.1},{"time":1579060800,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":37.75,"apparentTemperature":34.18,"dewPoint":8.08,"humidity":0.29,"pressure":1011.8,"windSpeed":4.59,"windGust":6.34,"windBearing":202,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":353.3},{"time":1579064400,"summary":"Clear","icon":"clear-night","precipIntensity":0.0005,"precipProbability":0.01,"precipType":"snow","precipAccumulation":0.0026,"temperature":35.83,"apparentTemperature":32.41,"dewPoint":8.27,"humidity":0.31,"pressure":1013.2,"windSpeed":4.09,"windGust":5.54,"windBearing":208,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":351.8},{"time":1579068000,"summary":"Clear","icon":"clear-night","precipIntensity":0.0011,"precipProbability":0.01,"precipType":"snow","precipAccumulation":0.0065,"temperature":33.48,"apparentTemperature":29.65,"dewPoint":8.47,"humidity":0.35,"pressure":1014.3,"windSpeed":4.14,"windGust":6.06,"windBearing":213,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":350.3},{"time":1579071600,"summary":"Clear","icon":"clear-night","precipIntensity":0.0003,"precipProbability":0.01,"precipType":"snow","precipAccumulation":0.0024,"temperature":31.14,"apparentTemperature":27.64,"dewPoint":9.05,"humidity":0.39,"pressure":1015.2,"windSpeed":3.52,"windGust":5.39,"windBearing":214,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":349.1},{"time":1579075200,"summary":"Clear","icon":"clear-night","precipIntensity":0.0008,"precipProbability":0.01,"precipType":"snow","precipAccumulation":0.0072,"temperature":29.16,"apparentTemperature":25.64,"dewPoint":9.8,"humidity":0.44,"pressure":1016.7,"windSpeed":3.32,"windGust":6.48,"windBearing":130,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":347.9},{"time":1579078800,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":28.72,"apparentTemperature":24.38,"dewPoint":11.24,"humidity":0.47,"pressure":1017,"windSpeed":3.92,"windGust":8.83,"windBearing":120,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":346.4},{"time":1579082400,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":27.85,"apparentTemperature":23.11,"dewPoint":11.43,"humidity":0.5,"pressure":1017.8,"windSpeed":4.15,"windGust":6.66,"windBearing":157,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":344.1},{"time":1579086000,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":26.67,"apparentTemperature":22.07,"dewPoint":11.11,"humidity":0.51,"pressure":1019.3,"windSpeed":3.88,"windGust":6.17,"windBearing":157,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":341.7},{"time":1579089600,"summary":"Clear","icon":"clear-night","precipIntensity":0.0014,"precipProbability":0.01,"precipType":"snow","precipAccumulation":0.016,"temperature":24.63,"apparentTemperature":20.11,"dewPoint":10.18,"humidity":0.54,"pressure":1020.3,"windSpeed":3.58,"windGust":4.54,"windBearing":171,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":339.8},{"time":1579093200,"summary":"Clear","icon":"clear-night","precipIntensity":0.0014,"precipProbability":0.01,"precipType":"snow","precipAccumulation":0.0176,"temperature":23.52,"apparentTemperature":18.12,"dewPoint":9.53,"humidity":0.55,"pressure":1021.3,"windSpeed":4.13,"windGust":8.16,"windBearing":166,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":339.2},{"time":1579096800,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":22.26,"apparentTemperature":16.58,"dewPoint":8.83,"humidity":0.56,"pressure":1021.9,"windSpeed":4.19,"windGust":6.72,"windBearing":175,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":339.3},{"time":1579100400,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":23.71,"apparentTemperature":17.53,"dewPoint":8.57,"humidity":0.52,"pressure":1022.9,"windSpeed":4.83,"windGust":8.14,"windBearing":168,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":339},{"time":1579104000,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":28.6,"apparentTemperature":23.31,"dewPoint":8.95,"humidity":0.43,"pressure":1022.9,"windSpeed":4.78,"windGust":8.19,"windBearing":167,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":337.9},{"time":1579107600,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":35.63,"apparentTemperature":32.01,"dewPoint":6.63,"humidity":0.29,"pressure":1022,"windSpeed":4.26,"windGust":7.48,"windBearing":158,"cloudCover":0,"uvIndex":1,"visibility":10,"ozone":336.6},{"time":1579111200,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":41.43,"apparentTemperature":38.25,"dewPoint":3.42,"humidity":0.2,"pressure":1020.7,"windSpeed":4.87,"windGust":6.59,"windBearing":130,"cloudCover":0,"uvIndex":2,"visibility":10,"ozone":335.1},{"time":1579114800,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":46.1,"apparentTemperature":43.51,"dewPoint":-0.02,"humidity":0.14,"pressure":1019.4,"windSpeed":5.19,"windGust":5.44,"windBearing":107,"cloudCover":0,"uvIndex":2,"visibility":10,"ozone":333.9},{"time":1579118400,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":49.15,"apparentTemperature":46.66,"dewPoint":-2.39,"humidity":0.11,"pressure":1018.6,"windSpeed":5.98,"windGust":6.06,"windBearing":74,"cloudCover":0,"uvIndex":2,"visibility":10,"ozone":332.8},{"time":1579122000,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":49.67,"apparentTemperature":47.4,"dewPoint":-1.85,"humidity":0.12,"pressure":1018.5,"windSpeed":5.76,"windGust":5.86,"windBearing":44,"cloudCover":0.05,"uvIndex":1,"visibility":10,"ozone":331.2},{"time":1579125600,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":48.22,"apparentTemperature":45.29,"dewPoint":1.35,"humidity":0.14,"pressure":1019.4,"windSpeed":6.5,"windGust":7.28,"windBearing":27,"cloudCover":0.07,"uvIndex":1,"visibility":10,"ozone":328.9},{"time":1579129200,"summary":"Clear","icon":"clear-day","precipIntensity":0,"precipProbability":0,"temperature":45.12,"apparentTemperature":41.54,"dewPoint":6.31,"humidity":0.2,"pressure":1020.9,"windSpeed":6.56,"windGust":10.97,"windBearing":9,"cloudCover":0.03,"uvIndex":0,"visibility":10,"ozone":326.3},{"time":1579132800,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":40.94,"apparentTemperature":37.19,"dewPoint":10.24,"humidity":0.28,"pressure":1022.8,"windSpeed":5.54,"windGust":12.9,"windBearing":358,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":323.7},{"time":1579136400,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":37.86,"apparentTemperature":33.95,"dewPoint":11.93,"humidity":0.34,"pressure":1024.3,"windSpeed":5.02,"windGust":11.43,"windBearing":5,"cloudCover":0,"uvIndex":0,"visibility":10,"ozone":321.2},{"time":1579140000,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":35.01,"apparentTemperature":31.2,"dewPoint":12.7,"humidity":0.39,"pressure":1026.3,"windSpeed":4.35,"windGust":8.33,"windBearing":263,"cloudCover":0.02,"uvIndex":0,"visibility":10,"ozone":319},{"time":1579143600,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":32.94,"apparentTemperature":29.15,"dewPoint":12.4,"humidity":0.42,"pressure":1027.8,"windSpeed":4.01,"windGust":5.99,"windBearing":276,"cloudCover":0.04,"uvIndex":0,"visibility":10,"ozone":316.9},{"time":1579147200,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":31.47,"apparentTemperature":27.67,"dewPoint":12.6,"humidity":0.45,"pressure":1028.6,"windSpeed":3.82,"windGust":5.37,"windBearing":263,"cloudCover":0.03,"uvIndex":0,"visibility":10,"ozone":314.9},{"time":1579150800,"summary":"Clear","icon":"clear-night","precipIntensity":0,"precipProbability":0,"temperature":30.06,"apparentTemperature":25.76,"dewPoint":12.42,"humidity":0.47,"pressure":1029,"windSpeed":4.07,"windGust":5.47,"windBearing":193,"cloudCover":0.09,"uvIndex":0,"visibility":10,"ozone":313.1},{"time":1579154400,"summary":"Partly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":28.25,"apparentTemperature":23.5,"dewPoint":12.26,"humidity":0.51,"pressure":1029.1,"windSpeed":4.21,"windGust":5.57,"windBearing":181,"cloudCover":0.34,"uvIndex":0,"visibility":10,"ozone":311.9},{"time":1579158000,"summary":"Partly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":27.55,"apparentTemperature":22.85,"dewPoint":12.16,"humidity":0.52,"pressure":1028.5,"windSpeed":4.07,"windGust":5.48,"windBearing":186,"cloudCover":0.49,"uvIndex":0,"visibility":10,"ozone":311.6},{"time":1579161600,"summary":"Partly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":26.98,"apparentTemperature":21.84,"dewPoint":11.93,"humidity":0.53,"pressure":1028,"windSpeed":4.37,"windGust":5.4,"windBearing":204,"cloudCover":0.43,"uvIndex":0,"visibility":10,"ozone":311.9},{"time":1579165200,"summary":"Partly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":26.19,"apparentTemperature":20.62,"dewPoint":11.7,"humidity":0.54,"pressure":1027.5,"windSpeed":4.64,"windGust":5.42,"windBearing":200,"cloudCover":0.42,"uvIndex":0,"visibility":10,"ozone":312.4},{"time":1579168800,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":25.15,"apparentTemperature":19.12,"dewPoint":11.72,"humidity":0.56,"pressure":1027.2,"windSpeed":4.9,"windGust":5.58,"windBearing":207,"cloudCover":0.74,"uvIndex":0,"visibility":10,"ozone":313},{"time":1579172400,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":23.83,"apparentTemperature":18.01,"dewPoint":11.87,"humidity":0.6,"pressure":1026.8,"windSpeed":4.52,"windGust":5.04,"windBearing":209,"cloudCover":0.76,"uvIndex":0,"visibility":10,"ozone":313.7},{"time":1579176000,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":22.87,"apparentTemperature":16.62,"dewPoint":11.88,"humidity":0.62,"pressure":1026.9,"windSpeed":4.76,"windGust":5.15,"windBearing":195,"cloudCover":0.79,"uvIndex":0,"visibility":10,"ozone":313.9},{"time":1579179600,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":22.12,"apparentTemperature":16.14,"dewPoint":11.9,"humidity":0.64,"pressure":1026.8,"windSpeed":4.42,"windGust":4.76,"windBearing":176,"cloudCover":0.85,"uvIndex":0,"visibility":10,"ozone":313.3},{"time":1579183200,"summary":"Overcast","icon":"cloudy","precipIntensity":0,"precipProbability":0,"temperature":22.35,"apparentTemperature":15.92,"dewPoint":11.86,"humidity":0.64,"pressure":1026.6,"windSpeed":4.84,"windGust":5.12,"windBearing":181,"cloudCover":0.93,"uvIndex":0,"visibility":10,"ozone":312.1},{"time":1579186800,"summary":"Overcast","icon":"cloudy","precipIntensity":0,"precipProbability":0,"temperature":23.32,"apparentTemperature":17.68,"dewPoint":11.67,"humidity":0.61,"pressure":1026.1,"windSpeed":4.3,"windGust":4.6,"windBearing":211,"cloudCover":0.99,"uvIndex":0,"visibility":10,"ozone":311.5},{"time":1579190400,"summary":"Overcast","icon":"cloudy","precipIntensity":0,"precipProbability":0,"temperature":27.23,"apparentTemperature":22.53,"dewPoint":12.74,"humidity":0.54,"pressure":1025,"windSpeed":4.03,"windGust":4.37,"windBearing":170,"cloudCover":1,"uvIndex":0,"visibility":10,"ozone":311.9},{"time":1579194000,"summary":"Overcast","icon":"cloudy","precipIntensity":0,"precipProbability":0,"temperature":31.91,"apparentTemperature":28.32,"dewPoint":12.95,"humidity":0.45,"pressure":1023.6,"windSpeed":3.7,"windGust":4.09,"windBearing":87,"cloudCover":1,"uvIndex":1,"visibility":10,"ozone":312.9},{"time":1579197600,"summary":"Overcast","icon":"cloudy","precipIntensity":0,"precipProbability":0,"temperature":35.19,"apparentTemperature":31.9,"dewPoint":12.43,"humidity":0.39,"pressure":1021.9,"windSpeed":3.86,"windGust":4.29,"windBearing":57,"cloudCover":1,"uvIndex":2,"visibility":10,"ozone":313.7},{"time":1579201200,"summary":"Overcast","icon":"cloudy","precipIntensity":0.0002,"precipProbability":0.02,"precipType":"rain","temperature":40.55,"apparentTemperature":37.75,"dewPoint":10.86,"humidity":0.29,"pressure":1019.4,"windSpeed":4.22,"windGust":4.51,"windBearing":66,"cloudCover":0.93,"uvIndex":2,"visibility":10,"ozone":313.8},{"time":1579204800,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-day","precipIntensity":0.0003,"precipProbability":0.02,"precipType":"rain","temperature":44.67,"apparentTemperature":42.3,"dewPoint":10.29,"humidity":0.24,"pressure":1017.3,"windSpeed":4.52,"windGust":4.81,"windBearing":54,"cloudCover":0.83,"uvIndex":2,"visibility":10,"ozone":313.7},{"time":1579208400,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-day","precipIntensity":0.0003,"precipProbability":0.02,"precipType":"rain","temperature":47.36,"apparentTemperature":45.18,"dewPoint":10.39,"humidity":0.22,"pressure":1015.8,"windSpeed":4.91,"windGust":5.19,"windBearing":40,"cloudCover":0.73,"uvIndex":1,"visibility":10,"ozone":313.7},{"time":1579212000,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-day","precipIntensity":0.0002,"precipProbability":0.02,"precipType":"rain","temperature":45.89,"apparentTemperature":43.59,"dewPoint":12.72,"humidity":0.26,"pressure":1015.6,"windSpeed":4.71,"windGust":5.18,"windBearing":9,"cloudCover":0.6,"uvIndex":1,"visibility":10,"ozone":314.1},{"time":1579215600,"summary":"Partly
+        Cloudy","icon":"partly-cloudy-day","precipIntensity":0,"precipProbability":0,"temperature":42.61,"apparentTemperature":39.85,"dewPoint":15.5,"humidity":0.33,"pressure":1016,"windSpeed":4.58,"windGust":5.32,"windBearing":338,"cloudCover":0.46,"uvIndex":0,"visibility":10,"ozone":314.5},{"time":1579219200,"summary":"Partly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":39.63,"apparentTemperature":36.38,"dewPoint":17.38,"humidity":0.4,"pressure":1016.4,"windSpeed":4.57,"windGust":5.21,"windBearing":352,"cloudCover":0.38,"uvIndex":0,"visibility":10,"ozone":314.9},{"time":1579222800,"summary":"Partly
+        Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":37.4,"apparentTemperature":34.02,"dewPoint":17.73,"humidity":0.45,"pressure":1016.6,"windSpeed":4.31,"windGust":4.41,"windBearing":66,"cloudCover":0.41,"uvIndex":0,"visibility":10,"ozone":315.1}]},"daily":{"summary":"No
+        precipitation throughout the week.","icon":"clear-day","data":[{"time":1578985200,"summary":"Clear
+        throughout the day.","icon":"clear-day","sunriseTime":1579011660,"sunsetTime":1579046340,"moonPhase":0.66,"precipIntensity":0.0003,"precipIntensityMax":0.0012,"precipIntensityMaxTime":1579056480,"precipProbability":0.03,"precipType":"snow","precipAccumulation":0.02,"temperatureHigh":58.87,"temperatureHighTime":1579034760,"temperatureLow":21.77,"temperatureLowTime":1579096740,"apparentTemperatureHigh":58.37,"apparentTemperatureHighTime":1579034760,"apparentTemperatureLow":16.53,"apparentTemperatureLowTime":1579097760,"dewPoint":6.91,"humidity":0.3,"pressure":1011.2,"windSpeed":4.1,"windGust":16.65,"windGustTime":1579025760,"windBearing":170,"cloudCover":0,"uvIndex":2,"uvIndexTime":1579028880,"visibility":10,"ozone":356.1,"temperatureMin":23.41,"temperatureMinTime":1579006560,"temperatureMax":58.87,"temperatureMaxTime":1579034760,"apparentTemperatureMin":20.91,"apparentTemperatureMinTime":1579010100,"apparentTemperatureMax":58.37,"apparentTemperatureMaxTime":1579034760},{"time":1579071600,"summary":"Clear
+        throughout the day.","icon":"clear-day","sunriseTime":1579098000,"sunsetTime":1579132800,"moonPhase":0.7,"precipIntensity":0.0002,"precipIntensityMax":0.0016,"precipIntensityMaxTime":1579091580,"precipProbability":0.02,"precipType":"snow","precipAccumulation":0.05,"temperatureHigh":50.24,"temperatureHighTime":1579120980,"temperatureLow":21.6,"temperatureLowTime":1579180380,"apparentTemperatureHigh":47.47,"apparentTemperatureHighTime":1579121220,"apparentTemperatureLow":15.83,"apparentTemperatureLowTime":1579182300,"dewPoint":8.26,"humidity":0.38,"pressure":1022.1,"windSpeed":4.61,"windGust":12.91,"windGustTime":1579132980,"windBearing":138,"cloudCover":0.04,"uvIndex":2,"uvIndexTime":1579115340,"visibility":10,"ozone":331.3,"temperatureMin":21.77,"temperatureMinTime":1579096740,"temperatureMax":50.24,"temperatureMaxTime":1579120980,"apparentTemperatureMin":16.53,"apparentTemperatureMinTime":1579097760,"apparentTemperatureMax":47.47,"apparentTemperatureMaxTime":1579121220},{"time":1579158000,"summary":"Mostly
+        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1579184400,"sunsetTime":1579219260,"moonPhase":0.74,"precipIntensity":0.0001,"precipIntensityMax":0.0003,"precipIntensityMaxTime":1579207860,"precipProbability":0.07,"precipType":"snow","precipAccumulation":0.02,"temperatureHigh":47.89,"temperatureHighTime":1579208760,"temperatureLow":28.85,"temperatureLowTime":1579268760,"apparentTemperatureHigh":45.21,"apparentTemperatureHighTime":1579208760,"apparentTemperatureLow":21.85,"apparentTemperatureLowTime":1579269000,"dewPoint":14.16,"humidity":0.48,"pressure":1021.1,"windSpeed":4.63,"windGust":7.39,"windGustTime":1579244400,"windBearing":179,"cloudCover":0.7,"uvIndex":2,"uvIndexTime":1579202220,"visibility":10,"ozone":313.7,"temperatureMin":21.6,"temperatureMinTime":1579180380,"temperatureMax":47.89,"temperatureMaxTime":1579208760,"apparentTemperatureMin":15.83,"apparentTemperatureMinTime":1579182300,"apparentTemperatureMax":45.21,"apparentTemperatureMaxTime":1579208760},{"time":1579244400,"summary":"Windy
+        in the afternoon and evening.","icon":"wind","sunriseTime":1579270800,"sunsetTime":1579305780,"moonPhase":0.77,"precipIntensity":0.0008,"precipIntensityMax":0.007,"precipIntensityMaxTime":1579294800,"precipProbability":0.07,"precipType":"rain","temperatureHigh":49.67,"temperatureHighTime":1579287060,"temperatureLow":22.41,"temperatureLowTime":1579354440,"apparentTemperatureHigh":46.02,"apparentTemperatureHighTime":1579285200,"apparentTemperatureLow":15.97,"apparentTemperatureLowTime":1579349820,"dewPoint":9.07,"humidity":0.37,"pressure":1015.1,"windSpeed":10.33,"windGust":43.34,"windGustTime":1579312260,"windBearing":284,"cloudCover":0.17,"uvIndex":2,"uvIndexTime":1579288080,"visibility":10,"ozone":328.1,"temperatureMin":28.85,"temperatureMinTime":1579268760,"temperatureMax":49.67,"temperatureMaxTime":1579287060,"apparentTemperatureMin":21.85,"apparentTemperatureMinTime":1579269000,"apparentTemperatureMax":46.02,"apparentTemperatureMaxTime":1579285200},{"time":1579330800,"summary":"Overcast
+        throughout the day.","icon":"cloudy","sunriseTime":1579357140,"sunsetTime":1579392240,"moonPhase":0.81,"precipIntensity":0,"precipIntensityMax":0.0002,"precipIntensityMaxTime":1579392000,"precipProbability":0.01,"temperatureHigh":39.03,"temperatureHighTime":1579382580,"temperatureLow":26.43,"temperatureLowTime":1579441560,"apparentTemperatureHigh":35.12,"apparentTemperatureHighTime":1579382220,"apparentTemperatureLow":22.4,"apparentTemperatureLowTime":1579441800,"dewPoint":-2.53,"humidity":0.24,"pressure":1028,"windSpeed":3.98,"windGust":12.45,"windGustTime":1579339560,"windBearing":154,"cloudCover":0.85,"uvIndex":2,"uvIndexTime":1579374540,"visibility":10,"ozone":301.1,"temperatureMin":22.41,"temperatureMinTime":1579354440,"temperatureMax":39.03,"temperatureMaxTime":1579382580,"apparentTemperatureMin":15.97,"apparentTemperatureMinTime":1579349820,"apparentTemperatureMax":35.12,"apparentTemperatureMaxTime":1579382220},{"time":1579417200,"summary":"Clear
+        throughout the day.","icon":"clear-day","sunriseTime":1579443540,"sunsetTime":1579478700,"moonPhase":0.84,"precipIntensity":0,"precipIntensityMax":0.0002,"precipIntensityMaxTime":1579479600,"precipProbability":0.03,"temperatureHigh":47.9,"temperatureHighTime":1579467780,"temperatureLow":24.75,"temperatureLowTime":1579528320,"apparentTemperatureHigh":45.87,"apparentTemperatureHighTime":1579464780,"apparentTemperatureLow":20.98,"apparentTemperatureLowTime":1579530960,"dewPoint":13.27,"humidity":0.42,"pressure":1027.8,"windSpeed":3.04,"windGust":4.52,"windGustTime":1579478700,"windBearing":137,"cloudCover":0.26,"uvIndex":3,"uvIndexTime":1579460880,"visibility":10,"ozone":306.7,"temperatureMin":26.43,"temperatureMinTime":1579441560,"temperatureMax":47.9,"temperatureMaxTime":1579467780,"apparentTemperatureMin":22.4,"apparentTemperatureMinTime":1579441800,"apparentTemperatureMax":45.87,"apparentTemperatureMaxTime":1579464780},{"time":1579503600,"summary":"Partly
+        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1579529880,"sunsetTime":1579565160,"moonPhase":0.88,"precipIntensity":0.0001,"precipIntensityMax":0.0003,"precipIntensityMaxTime":1579512480,"precipProbability":0.02,"precipType":"snow","precipAccumulation":0.01,"temperatureHigh":49.47,"temperatureHighTime":1579554660,"temperatureLow":27.78,"temperatureLowTime":1579608180,"apparentTemperatureHigh":48.97,"apparentTemperatureHighTime":1579554660,"apparentTemperatureLow":23.55,"apparentTemperatureLowTime":1579607580,"dewPoint":12.1,"humidity":0.41,"pressure":1028.7,"windSpeed":3.31,"windGust":4.74,"windGustTime":1579564920,"windBearing":188,"cloudCover":0.48,"uvIndex":2,"uvIndexTime":1579546260,"visibility":10,"ozone":302.1,"temperatureMin":24.75,"temperatureMinTime":1579528320,"temperatureMax":49.47,"temperatureMaxTime":1579554660,"apparentTemperatureMin":20.98,"apparentTemperatureMinTime":1579530960,"apparentTemperatureMax":48.97,"apparentTemperatureMaxTime":1579554660},{"time":1579590000,"summary":"Mostly
+        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1579616280,"sunsetTime":1579651620,"moonPhase":0.91,"precipIntensity":0,"precipIntensityMax":0.0002,"precipIntensityMaxTime":1579667400,"precipProbability":0.03,"temperatureHigh":54.06,"temperatureHighTime":1579640220,"temperatureLow":26.77,"temperatureLowTime":1579702620,"apparentTemperatureHigh":53.57,"apparentTemperatureHighTime":1579639980,"apparentTemperatureLow":25.35,"apparentTemperatureLowTime":1579694580,"dewPoint":9.83,"humidity":0.34,"pressure":1019.8,"windSpeed":3.71,"windGust":5.92,"windGustTime":1579635480,"windBearing":138,"cloudCover":0.87,"uvIndex":2,"uvIndexTime":1579633800,"visibility":10,"ozone":319,"temperatureMin":27.78,"temperatureMinTime":1579608180,"temperatureMax":54.06,"temperatureMaxTime":1579640220,"apparentTemperatureMin":23.55,"apparentTemperatureMinTime":1579607580,"apparentTemperatureMax":53.57,"apparentTemperatureMaxTime":1579639980}]},"offset":-7}
+
+        '
+    http_version: 
+  recorded_at: Wed, 15 Jan 2020 01:37:32 GMT
+recorded_with: VCR 5.0.0

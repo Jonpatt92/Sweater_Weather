@@ -1,5 +1,5 @@
 class Forecast
-  attr_reader :id, :location, :current_time, :current_summary, :day_summary, :temperature, :high, :low, :feels_like, :humidity, :visibility, :uv_index, :hourly_forecast, :daily_forecast
+  attr_reader :id, :location, :current_time, :current_summary, :day_summary, :temperature, :todays_high, :todays_low, :feels_like, :humidity, :visibility, :uv_index, :hourly_forecast, :daily_forecast
 
   def initialize(weather_data, location)
     @id              = 1
@@ -32,6 +32,6 @@ class Forecast
 
   def get_offset_time(time, timezone)
     tz = TZInfo::Timezone.get(timezone)
-    Time.at(time, in: tz).strftime('%l:%M %p, %-m/%d')
+    Time.at(time, in: tz).strftime('%-l:%M %p, %-m/%d')
   end
 end
