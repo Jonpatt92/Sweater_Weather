@@ -5,7 +5,7 @@ RSpec.describe 'When a new user submits email and password' do
     User.destroy_all
   end
   it 'Can return an api key' do
-    post "/api/v1/users", :params => {email: "email@example.com",
+    post "/api/v1/users", :params => { email: "email@example.com",
                                         password: "password",
                                         password_confirmation: "password"
                                       }
