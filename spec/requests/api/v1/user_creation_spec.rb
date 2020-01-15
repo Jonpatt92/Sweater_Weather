@@ -20,6 +20,7 @@ RSpec.describe 'When a new user submits email and password' do
                                       }
 
     expect(response.status).to eq(401)
+    expect(response.body).to include("Email has already been taken")
   end
 
   it 'Password must match' do
@@ -29,5 +30,6 @@ RSpec.describe 'When a new user submits email and password' do
                                       }
 
     expect(response.status).to eq(401)
+    expect(response.body).to include("Password confirmation doesn't match Password")
   end
 end
