@@ -8,8 +8,7 @@ RSpec.describe 'Forecast request' do
 
       parsed_response = JSON.parse(response.body, symbolize_names: true)
 
-      expect(parsed_response[:url]).to include('.com')
-      expect(parsed_response[:url]).to include('http')
+      expect(parsed_response[:image_url]).to include('https://images.unsplash.com')
     end
   end
 end
