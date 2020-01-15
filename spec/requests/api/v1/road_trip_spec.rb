@@ -15,11 +15,11 @@ RSpec.describe 'Road Trip request' do
 
       trip_data = JSON.parse(response.body, symbolize_names: true)
 
-      expect(trip_data[:data][:origin]).to eq("Denver, CO")
-      expect(trip_data[:data][:destination]).to eq("Pueblo, CO")
-      expect(trip_data[:data][:travel_time]).to eq('2 hours')
-      expect(trip_data[:data][:arrival_forecast][:temperature]).to eq(74)
-      expect(trip_data[:data][:arrival_forecast][:summary]).to eq('Mostly Sunny')
+      expect(trip_data[:data][:attributes][:trip_info][:origin]).to eq("Denver, CO")
+      expect(trip_data[:data][:attributes][:trip_info][:destination]).to eq("Pueblo, CO")
+      expect(trip_data[:data][:attributes][:trip_info][:trip_duration][:text]).to eq('1 hour 48 mins')
+      expect(trip_data[:data][:attributes][:destination_temperature]).to eq(38.11)
+      expect(trip_data[:data][:attributes][:destination_summary]).to eq('Clear')
     end
   end
 
