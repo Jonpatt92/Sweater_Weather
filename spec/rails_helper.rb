@@ -7,6 +7,17 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'vcr'
+require 'webmock/rspec'
+
+VCR.configure do |config|
+  config.ignore_localhost = true
+  config.cassette_library_dir = 'spec/cassettes'
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.filter_sensitive_data('<MAP_API_KEY>') { ENV['MAP_API_KEY'] }
+  config.filter_sensitive_data('<FORECAST_API_KEY>') { ENV['FORECAST_API_KEY'] }
+end
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -32,6 +43,20 @@ rescue ActiveRecord::PendingMigrationError => e
   puts e.to_s.strip
   exit 1
 end
+
+Capybara.configure do |config|
+  config.default_max_wait_time = 5
+end
+
+SimpleCov.start 'rails'
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
