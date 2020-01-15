@@ -13,11 +13,11 @@ RSpec.describe TripService, type: :service do
     VCR.use_cassette('denver_to_pueblo_trip_data') do
       origin = 'denver,co'
       destination = 'pueblo,co'
-      destination_coordinates = {lat: 1, long: 1}
+      destination_coordinates = { lat: 38.2542053, lng: -104.6087488 }
       trip_data = @service.get_trip_data(origin, destination)
 
-      expect(trip_data[:destination_coordinates]).to eq(destination_coordinates)
-      expect(trip_data[:travel_time]).to eq('2 hours')
+      expect(trip_data[:routes][0][:legs][0][:end_location]).to eq(destination_coordinates)
+      expect(trip_data[:routes][0][:legs][0][:duration][:text]).to eq('1 hour 48 mins')
     end
   end
 end
