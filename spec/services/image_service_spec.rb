@@ -13,8 +13,7 @@ RSpec.describe ImageService, type: :service do
     VCR.use_cassette('denver_background_image_data') do
       image_data = @service.get_image('denver,co')
 
-      expect(image_data[:url]).to include('.com')
-      expect(image_data[:url]).to include('http')
+      expect(image_data[:urls][:full]).to include('https://images.unsplash.com')
     end
   end
 end
